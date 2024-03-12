@@ -50,7 +50,7 @@ fun commodore(vararg string: String, block: Node.() -> Unit): CommandBase {
             return commodoreHandler.completions(args.fix())
         }
 
-        inline fun Array<out String>.fix(): String {
+        fun Array<out String>.fix(): String {
             return if (this.isEmpty()) commandName else "$commandName ${this.joinToString(separator = " ")}"
         }
     }
