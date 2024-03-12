@@ -11,6 +11,9 @@ class Command {
         runs { value: Long ->
             println(value)
         }
+        runs { valstr: String ->
+            println(valstr)
+        }
     }
 }
 
